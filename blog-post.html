@@ -334,6 +334,10 @@
         <div class="image-container">
             <img src="grafana_dashboard.png" alt="Grafana dashboard showing shipment tracking metrics" class="blog-image">
         </div>
+        <div class="links-section">
+            <p><strong>Links:</strong> <a href="https://grafana.com/docs/grafana/latest/getting-started/" target="_blank">Grafana Getting Started</a> | <a href="https://www.elastic.co/guide/index.html" target="_blank">Elasticsearch Guide</a> | <a href="https://www.elastic.co/guide/en/logstash/current/introduction.html" target="_blank">Logstash Guide</a> | <a href="https://www.elastic.co/guide/en/kibana/current/introduction.html" target="_blank">Kibana Guide</a></p>
+        </div>
+        
         
         <p> I have docker compose file to run all these services, otherwise it is cumbersome to handle each one of them.</p>
 
@@ -342,14 +346,6 @@
         <p>For logging, I used the ELK stack (Elasticsearch, Logstash, Kibana). My backend sends structured logs to Logstash via Winston HTTP transport, which processes them and stores them in Elasticsearch. Kibana provides the search interface.</p>
         
         <p>Elasticsearch is a distributed search and analytics engine built on Apache Lucene. It stores logs as JSON documents in indices and provides powerful full-text search capabilities with inverted indexes. Logstash acts as a data processing pipeline that ingests logs from multiple sources, transforms them using filters, and sends them to Elasticsearch. Kibana provides a web interface for searching, viewing, and analyzing logs stored in Elasticsearch with features like saved searches, visualizations, and dashboards.</p>
-        
-        <div class="links-section">
-            <p><strong>Links:</strong> <a href="https://grafana.com/docs/grafana/latest/getting-started/" target="_blank">Grafana Getting Started</a> | <a href="https://www.elastic.co/guide/index.html" target="_blank">Elasticsearch Guide</a> | <a href="https://www.elastic.co/guide/en/logstash/current/introduction.html" target="_blank">Logstash Guide</a> | <a href="https://www.elastic.co/guide/en/kibana/current/introduction.html" target="_blank">Kibana Guide</a></p>
-        </div>
-        
-        <div class="image-container">
-            <img src="grafana-dashboard.png" alt="Grafana dashboard showing metrics" class="blog-image">
-        </div>
         
         <p>I ran into Docker port mapping confusion - trying to connect to <code>localhost:3000</code> instead of <code>localhost:9302</code>. I created a systematic port mapping system and documented it clearly.</p>
                 
@@ -382,14 +378,6 @@
         
         <div class="links-section">
             <p><strong>Links:</strong> <a href="https://opentelemetry.io/docs/" target="_blank">OpenTelemetry Docs</a> | <a href="https://opentelemetry.io/docs/concepts/signals/traces/" target="_blank">Traces Concepts</a> | <a href="https://www.jaegertracing.io/docs/" target="_blank">Jaeger Documentation</a> | <a href="https://www.jaegertracing.io/docs/architecture/" target="_blank">Jaeger Architecture</a></p>
-        </div>
-        
-        <div class="image-container">
-            <img src="jaeger-ui-screenshot.png" alt="Jaeger UI showing distributed traces" class="blog-image">
-        </div>
-        
-        <div class="image-container">
-            <img src="jaeger-trace-detail.png" alt="Detailed Jaeger trace showing backend operation breakdown" class="blog-image">
         </div>
         
         <p>Docker build cache issues prevented my code changes from taking effect. I had to clean everything with <code>docker system prune -f</code> and rebuild from scratch.</p>
