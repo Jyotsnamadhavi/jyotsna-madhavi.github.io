@@ -636,20 +636,38 @@ section {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.contact-info h3 {
+.contact-text {
+    margin-bottom: 3rem;
+}
+
+.contact-text h3 {
     color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.contact-message {
+    margin-bottom: 2rem;
+}
+
+.contact-message p {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    line-height: 1.7;
     margin-bottom: 1rem;
 }
 
-.contact-info p {
-    color: var(--text-secondary);
-    margin-bottom: 2rem;
+.contact-message p:last-child {
+    margin-bottom: 0;
 }
 
 .contact-methods {
@@ -673,8 +691,35 @@ section {
     transform: translateX(5px);
 }
 
+.contact-icons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .contact-icon {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    color: #3b82f6;
+}
+
+.contact-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    color: #1d4ed8;
+}
+
+.contact-icon svg {
+    width: 28px;
+    height: 28px;
 }
 
 .contact-form {
